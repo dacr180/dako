@@ -1,4 +1,6 @@
 Dako::Application.routes.draw do
+  resources :registers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
