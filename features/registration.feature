@@ -1,0 +1,22 @@
+Feature: Addition new register 
+    Scenario: User adds a new register
+    	Given I go to "/"
+        When I fill in "email" with "dacr180@gmail.com" 
+        And I fill in "name" with "Daniel" 
+        And I press Create
+        Then I should see "Email submitted"
+    
+    Scenario: User adds a new register without 'Email'
+    	Given I go to "/"
+        When I fill in "email" with "" 
+        And I fill in "name" with "Daniel" 
+        And I press Create
+        Then I should see "missing the Email of the register"
+
+    Scenario: User adds a new register without 'Name'
+    	Given I go to "/"
+        When I fill in "email" with "dacr@180.gmail.com" 
+        And I fill in "name" with "" 
+        And I press Create
+        Then I should see "missing the Name of the register"
+   
